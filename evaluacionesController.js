@@ -1,9 +1,7 @@
-// evaluacionesController.js
 
 const mysql = require('mysql2');
 
 class EvaluacionesController {
-  // Método para obtener la lista de evaluaciones
   static obtenerEvaluaciones(req, res, next) {
     const connection = mysql.createConnection({
       host: 'sql10.freemysqlhosting.net',

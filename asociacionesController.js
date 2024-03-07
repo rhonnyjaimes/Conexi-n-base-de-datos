@@ -23,7 +23,6 @@ class AsociacionesController {
     });
   }
 
-  // Método para agregar una nueva asociación Profesor-Materia
   static agregarAsociacionProfesorMateria(req, res) {
     const { id_profesor, id_materia } = req.body;
 
@@ -54,7 +53,6 @@ class AsociacionesController {
     });
   }
 
-  // Método para editar una asociación Profesor-Materia existente
   static editarAsociacionProfesorMateria(req, res) {
     const asociacionId = req.params.id;
     const { id_profesor, id_materia } = req.body;
@@ -86,7 +84,6 @@ class AsociacionesController {
     });
   }
 
-  // Método para eliminar una asociación Profesor-Materia
   static eliminarAsociacionProfesorMateria(req, res) {
     const asociacionId = req.params.id;
 
@@ -113,15 +110,6 @@ class AsociacionesController {
     });
   }
 
-}
-// asociacionesController.js
-
-const mysql = require('mysql2');
-
-class AsociacionesController {
-  // ... (código anterior)
-
-  // Método para obtener todas las asociaciones Materia-Sección
   static obtenerAsociacionesMateriaSeccion(req, res) {
     const connection = mysql.createConnection({
       host: 'sql10.freemysqlhosting.net',
@@ -143,7 +131,6 @@ class AsociacionesController {
     });
   }
 
-  // Método para agregar una nueva asociación Materia-Sección
   static agregarAsociacionMateriaSeccion(req, res) {
     const { id_materia, id_seccion } = req.body;
 
@@ -174,7 +161,6 @@ class AsociacionesController {
     });
   }
 
-  // Método para editar una asociación Materia-Sección existente
   static editarAsociacionMateriaSeccion(req, res) {
     const asociacionId = req.params.id;
     const { id_materia, id_seccion } = req.body;
@@ -206,7 +192,6 @@ class AsociacionesController {
     });
   }
 
-  // Método para eliminar una asociación Materia-Sección
   static eliminarAsociacionMateriaSeccion(req, res) {
     const asociacionId = req.params.id;
 
@@ -232,11 +217,8 @@ class AsociacionesController {
       connection.end();
     });
   }
-// asociacionesController.js
 
-// ... (código anterior)
 
-// Método para obtener todas las asociaciones Evaluación-Actividad
 static obtenerAsociacionesEvaluacionActividad(req, res) {
     const connection = mysql.createConnection({
       host: 'sql10.freemysqlhosting.net',
@@ -258,7 +240,6 @@ static obtenerAsociacionesEvaluacionActividad(req, res) {
     });
 }
 
-// Método para agregar una nueva asociación Evaluación-Actividad
 static agregarAsociacionEvaluacionActividad(req, res) {
     const { id_evaluacion, id_actividad } = req.body;
 
@@ -289,7 +270,6 @@ static agregarAsociacionEvaluacionActividad(req, res) {
     });
 }
 
-// Método para editar una asociación Evaluación-Actividad existente
 static editarAsociacionEvaluacionActividad(req, res) {
     const asociacionId = req.params.id;
     const { id_evaluacion, id_actividad } = req.body;
@@ -321,7 +301,6 @@ static editarAsociacionEvaluacionActividad(req, res) {
     });
 }
 
-// Método para eliminar una asociación Evaluación-Actividad
 static eliminarAsociacionEvaluacionActividad(req, res) {
     const asociacionId = req.params.id;
 
